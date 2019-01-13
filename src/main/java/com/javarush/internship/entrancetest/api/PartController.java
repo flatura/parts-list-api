@@ -1,9 +1,13 @@
 package com.javarush.internship.entrancetest.api;
 
+import com.javarush.internship.entrancetest.Converter;
+import com.javarush.internship.entrancetest.api.viewmodel.PartViewModel;
 import com.javarush.internship.entrancetest.entity.Part;
 import com.javarush.internship.entrancetest.repository.PartRepository;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.ValidationException;
 import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -14,9 +18,11 @@ import java.util.stream.Collectors;
 @CrossOrigin
 public class PartController {
     private PartRepository partRepository;
+    private Converter converter;
 
     public PartController(PartRepository partRepository) {
         this.partRepository = partRepository;
+        this.converter = new Converter();
     }
 
     @GetMapping("/list/all")
@@ -34,14 +40,6 @@ public class PartController {
         return this.partRepository.findAll().stream().filter(p -> !p.isRequired()).collect(Collectors.toList());
     }
 
-    //TODO Дописать API создания новой entity
-    @PostMapping("/part/new")
-    public void createPart(@RequestBody Part newPart) {
-        if (newPart != null) {
-            this.partRepository.saveAndFlush(newPart);
-        }
-    }
-
     @GetMapping("part/get/{unparsedId}")
     public Part getPart(@PathVariable String unparsedId) {
         int id = Integer.getInteger(unparsedId);
@@ -50,14 +48,18 @@ public class PartController {
         else return null;
     }
 
-    //TODO Дописать API редактирования существующего комплектующего
+    //TODO Дописать API сохранения нового или существующего комплектующего
     @PostMapping("/part/save")
-    public void setPart(@RequestBody Part newPart) {
-        if (newPart != null) {
-            if (this.partRepository.existsById(newPart.getId())) {
-                this.partRepository.saveAndFlush(newPart);
-            }
+    public Part savePart(@RequestBody PartViewModel partViewModel, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new ValidationException();
         }
+        Part newPartEntity = null;
+        if (partViewModel != null) {
+            newPartEntity = this.converter.convertToPartEntity(partViewModel);
+            this.partRepository.saveAndFlush(newPartEntity);
+        }
+        return newPartEntity;
     }
 
     @DeleteMapping("/part/delete/{unparsedId}")

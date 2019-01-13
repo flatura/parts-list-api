@@ -1,0 +1,199 @@
+POST http://localhost:8080/api/part/save
+Content-Type: application/json
+{:
+"id": "1",
+"name": "Материнская плата",
+"required": "true",
+"count": "6"
+}:
+
+<> 2019-01-13T093730.400.html
+
+###
+
+POST http://localhost:8080/api/part/save
+Content-Type: application/json
+{:
+"id": "1",
+"name": "Материнская плата",
+"required": "true",
+"count": "6"
+}:
+
+<> 2019-01-13T093321.400.html
+
+###
+
+GET http://localhost:8080/api/list/optional
+
+<> 2019-01-13T093317.200.json
+
+###
+
+GET http://localhost:8080/api/list/required
+
+<> 2019-01-13T093315.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-13T093311.200.json
+
+###
+
+POST http://localhost:8080/api/part
+Content-Type: application/json
+{:
+"id": "1",
+"name": "Материнская плата",
+"required": "true",
+"count": "6"
+}:
+
+<> 2019-01-13T092632.400.html
+
+###
+
+GET http://localhost:8080/api/info/assembliesavailable
+
+<> 2019-01-13T072007.200.json
+
+###
+
+GET http://localhost:8080/api/info/assembliesavailable
+
+<> 2019-01-13T071909.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-13T124422.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-12T084106.200.json
+
+###
+
+GET http://localhost:8080/api/list/required
+
+###
+
+GET http://localhost:8080/api/list/required
+
+###
+
+GET http://localhost:8080/api/list/required
+
+<> 2019-01-08T113527.200.json
+
+###
+
+GET http://localhost:8080/api/list/optional
+
+<> 2019-01-08T113522.200.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-08T113502.404.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-08T113444.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-08T113305.404.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-08T113251.404.json
+
+###
+
+GET http://localhost:8080/api/optional
+
+<> 2019-01-08T100315.200.json
+
+###
+
+GET http://localhost:8080/api/required
+
+<> 2019-01-08T100301.200.json
+
+###
+
+GET http://localhost:8080/api/all
+
+<> 2019-01-08T094554.200.json
+
+###
+
+GET http://localhost:8080/api/all
+
+<> 2019-01-08T092902.200.json
+
+###
+
+GET http://localhost:8080/api/all
+
+<> 2019-01-08T090639.200.json
+
+###
+
+GET http://localhost:8080/api/all
+
+<> 2019-01-08T090207.200.json
+
+###
+
+GET http://localhost:8080/api/all
+
+<> 2019-01-08T085919.200.json
+
+###
+
+GET http://localhost:8080/api/all
+
+<> 2019-01-08T085739.500.json
+
+###
+
+GET http://localhost:8080/api/all
+
+###
+
+GET http://localhost:8080/api/all
+
+###
+
+GET http://localhost:8080/api/all
+
+<> 2019-01-08T085300.404.json
+
+###
+
+GET http://localhost:8082/api/all
+
+###
+
+GET http://{{host-url}}/all
+
+###
+

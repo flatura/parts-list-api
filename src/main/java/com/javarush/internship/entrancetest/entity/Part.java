@@ -6,7 +6,6 @@ import javax.persistence.*;
 @Table(name = "part", schema = "test", catalog = "")
 public class Part{
     @Id
-    @GeneratedValue
     private int id;
     @Column(name = "name")
     private String name;
@@ -24,8 +23,19 @@ public class Part{
         this.count = count;
     }
 
+    public Part(int id, String name, boolean required, int count) {
+        this.id = id;
+        this.name = name;
+        this.required = required;
+        this.count = count;
+    }
+
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

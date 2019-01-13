@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EntranceTestApplication {
 
     public static void main(String[] args) {
-        System.out.println("It works!");
+        System.out.println("Welcome to Parts list application (API-side) by Morozov Dmitry @2019!");
+        System.out.println("Used technologies: Spring Boot, JPA, MySQL, ");
+        System.out.println();
+        System.out.println("Ensure the MySQL is running on local port 3306!");
         SpringApplication.run(EntranceTestApplication.class, args);
     }
 
