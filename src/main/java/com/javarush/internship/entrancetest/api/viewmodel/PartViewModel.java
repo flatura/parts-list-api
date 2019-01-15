@@ -4,24 +4,23 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 public class PartViewModel {
-    private String id;
 
+    @NotNull
+    private String id;
     @NotNull
     @Min(3)
     private String name;
-
     @NotNull
     private String required;
-
     @NotNull
     private String count;
 
-    public String getId() {
-        return id;
+    public int getId() {
+        return Integer.parseInt(id);
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(int id) {
+        this.id = String.valueOf(id);
     }
 
     public String getName() {
@@ -32,19 +31,19 @@ public class PartViewModel {
         this.name = name;
     }
 
-    public String getRequired() {
-        return required;
+    public boolean getRequired() {
+        return required.equals("true");
     }
 
-    public void setRequired(String required) {
-        this.required = required;
+    public void setRequired(boolean required) {
+        this.required = required ? "true" : "false";
     }
 
-    public String getCount() {
-        return count;
+    public int getCount() {
+        return Integer.parseInt(count);
     }
 
-    public void setCount(String count) {
-        this.count = count;
+    public void setCount(int count) {
+        this.count = String.valueOf(count);
     }
 }

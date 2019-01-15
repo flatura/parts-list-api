@@ -1,0 +1,47 @@
+# Запрашиваем все записи
+GET {{host-url}}//list/all
+###
+
+# Запрашиваем обязательные комплектующие
+GET {{host-url}}//list/required
+###
+
+# Запрашиваем необязательные комплектующие
+GET {{host-url}}//list/optional
+###
+
+# Запрашиваем необязательные комплектующие
+GET {{host-url}}//info/assembliesavailable
+
+###
+
+# Запрашиваем комплектующее
+POST {{host-url}}//part/2
+###
+
+# Создаем новое комплектующее
+POST {{host-url}}/part
+Content-Type: application/json
+
+{
+  "name": "Водяное охлаждение",
+  "required": "false",
+  "count": "1"
+}
+
+###
+
+# Сохраняем комплектующее
+PUT {{host-url}}/part/1
+Content-Type: application/json
+
+{
+  "name": "Материнская плата",
+  "required": "true",
+  "count": "7"
+}
+###
+
+# Запрашиваем удаление комплектующего с id
+DELETE {{host-url}}/part/delete/29
+###

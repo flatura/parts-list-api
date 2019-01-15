@@ -5,19 +5,25 @@ import javax.persistence.*;
 @Entity
 @Table(name = "part", schema = "test", catalog = "")
 public class Part{
+    private static int idCounter;
+
     @Id
-    private int id;
+    @Column(name = "id")
+    private Integer id;
     @Column(name = "name")
     private String name;
     @Column(name = "required")
     private boolean required;
     @Column(name = "count")
-    private int count;
+    private Integer count;
 
     public Part() {
+        this.id = idCounter;
+        idCounter++;
     }
 
     public Part(String name, boolean required, int count) {
+        this();
         this.name = name;
         this.required = required;
         this.count = count;
@@ -34,31 +40,19 @@ public class Part{
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public boolean isRequired() {
         return required;
     }
 
-    public void setRequired(boolean required) {
-        this.required = required;
-    }
-
     public int getCount() {
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setId(int id) {
+        this.id = id;
     }
 }
