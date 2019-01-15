@@ -10,10 +10,13 @@ public class Part{
     @Id
     @Column(name = "id")
     private Integer id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "required")
     private boolean required;
+
     @Column(name = "count")
     private Integer count;
 

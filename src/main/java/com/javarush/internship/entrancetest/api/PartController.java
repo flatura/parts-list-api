@@ -41,13 +41,19 @@ public class PartController {
         return this.partRepository.findAll().stream().filter(p -> !p.isRequired()).collect(Collectors.toList());
     }
 
-    // Получение одного комплектующего
-    @RequestMapping(value = "/part/{unparsedId}", method = RequestMethod.POST)
-    public Part getPart(@PathVariable String unparsedId) {
-        System.out.println();
-        Integer id = Integer.getInteger(unparsedId);
+    //API получения одного комплектующего
+    @GetMapping("/part/{unparsedId}")
+    public PartViewModel getPartById(@PathVariable String unparsedId) {
+        System.out.println("Getting Part with id = " + unparsedId);
+        Integer id = 0;
+        try {
+            id = Integer.parseInt(unparsedId);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+        System.out.println("id = " + id);
         if (this.partRepository.existsById(id))
-            return this.partRepository.getOne(id);
+            return ConvertHelper.convertToPartViewModel(this.partRepository.getOne(id));
         else return null;
     }
 
@@ -56,19 +62,21 @@ public class PartController {
     public ResponseEntity<Void> createPart(@RequestBody PartViewModel partViewModel) {
         System.out.println("Creating Part " + partViewModel.getName() + " / required=" + partViewModel.getRequired() + " / count=" + partViewModel.getCount());
 
-        if (partViewModel != null) {
-            Part partToCreate = ConvertHelper.convertToPartEntity(partViewModel);
-            this.partRepository.saveAndFlush(partToCreate);
-        } else {
-            return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
-        }
+        Part partToCreate = ConvertHelper.convertToPartEntity(partViewModel);
+        this.partRepository.saveAndFlush(partToCreate);
         return new ResponseEntity<Void>(HttpStatus.CREATED);
     }
 
     //Сохранение существующего комплектующего
     @RequestMapping(value = "/part/{unparsedId}", method = RequestMethod.PUT)
     public ResponseEntity<Void> savePart(@PathVariable String unparsedId, @RequestBody PartViewModel partViewModel) {
-        int id = Integer.parseInt(unparsedId);
+        Integer id = 0;
+        try {
+            id = Integer.parseInt(unparsedId);
+        } catch (NumberFormatException e) {
+            System.out.println("Ошибка парсинга id");
+            e.printStackTrace();
+        }
         System.out.println("Updating Part with id = " + unparsedId);
         if (this.partRepository.existsById(id)) {
             if (partViewModel != null) {
@@ -93,15 +101,15 @@ public class PartController {
                 .getCount();
     }
 
-    //TODO: Написать API удаления компелктующего под номером id
+    //API удаления компелктующего под номером id
     @DeleteMapping("/part/delete/{unparsedId}")
     public ResponseEntity<Void> deletePart(@PathVariable String unparsedId) {
         System.out.println("Удаление комплектующего с id = -" + unparsedId + "-");
-        Integer id = null;
+        Integer id = 0;
         try {
-            id = Integer.getInteger(unparsedId);
-        } catch (Exception e) {
-            System.out.println("Что-то пошло не так!");
+            id = Integer.parseInt(unparsedId);
+        } catch (NumberFormatException e) {
+            System.out.println("Ошибка парсинга ID");
             e.printStackTrace();
         }
         System.out.print("Поиск записи с id=" + id);
