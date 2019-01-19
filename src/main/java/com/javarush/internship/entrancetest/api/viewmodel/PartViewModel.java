@@ -4,46 +4,37 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 public class PartViewModel {
-
     @NotNull
     private String id;
     @NotNull
     @Min(3)
     private String name;
     @NotNull
-    private String required;
+    private String need;
     @NotNull
     private String count;
 
-    public int getId() {
-        return Integer.parseInt(id);
+    public PartViewModel(@NotNull String id, @NotNull @Min(3) String name, @NotNull String need, @NotNull String count) {
+        System.out.println(id + " " + name + " " + need + " " + count);
+        this.id = id;
+        this.name = name;
+        this.need = need;
+        this.count = count;
     }
 
-    public void setId(int id) {
-        this.id = String.valueOf(id);
+    public String getId() {
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String isRequired() {
+        return this.need;
     }
 
-    public boolean getRequired() {
-        return required.equals("true");
-    }
-
-    public void setRequired(boolean required) {
-        this.required = required ? "true" : "false";
-    }
-
-    public int getCount() {
-        return Integer.parseInt(count);
-    }
-
-    public void setCount(int count) {
-        this.count = String.valueOf(count);
+    public String getCount() {
+        return count;
     }
 }

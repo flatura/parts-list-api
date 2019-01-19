@@ -1,3 +1,173 @@
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T101142.200.json
+
+###
+
+GET http://localhost:8080/api/list/required
+
+<> 2019-01-18T100836.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T100828.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T100316.200.json
+
+###
+
+GET http://localhost:8080/api/info/assembliesavailable
+
+<> 2019-01-18T100310.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T100300.200.json
+
+###
+
+GET http://localhost:8080/api/list/required
+
+<> 2019-01-18T100253.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T094947.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T094551.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T094446.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T094248.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T093615.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T092641.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T090339.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T090046.200.json
+
+###
+
+GET http://localhost:8080/api/part/13
+
+###
+
+GET http://localhost:8080/api/part/13
+
+<> 2019-01-18T085605.200.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-18T085553.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T085429.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T084748.200.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-18T062403.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T061033.200.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-18T061026.200.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-18T060245.200.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-18T054831.200.json
+
+###
+
+GET http://localhost:8080/api/part/2
+
+<> 2019-01-18T053354.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T020324.200.json
+
+###
+
+GET http://localhost:8080/api/list/all
+
+<> 2019-01-18T010008.200.json
+
+###
+
 GET http://localhost:8080/api/part/2
 
 <> 2019-01-15T102821.200.json
@@ -123,214 +293,6 @@ POST http://localhost:8080/api/part/2
 GET http://localhost:8080/api/list/optional
 
 <> 2019-01-15T101126.200.json
-
-###
-
-DELETE http://localhost:8080/api/part/delete/29
-
-<> 2019-01-15T100334.500.json
-
-###
-
-GET http://localhost:8080/api/list/optional
-
-<> 2019-01-15T095458.200.json
-
-###
-
-GET http://localhost:8080/api/list/all
-
-<> 2019-01-15T095452.200.json
-
-###
-
-DELETE http://localhost:8080/api/part/delete/29
-
-<> 2019-01-15T081151.500.json
-
-###
-
-GET http://localhost:8080/api/list/optional
-
-<> 2019-01-15T081148.200.json
-
-###
-
-DELETE http://localhost:8080/api/part/delete/29
-
-<> 2019-01-15T080847.500.json
-
-###
-
-GET http://localhost:8080/api/list/optional
-
-<> 2019-01-15T080843.200.json
-
-###
-
-DELETE http://localhost:8080/api/part/delete/29
-
-<> 2019-01-15T080652.500.json
-
-###
-
-GET http://localhost:8080/api/list/optional
-
-<> 2019-01-15T080646.200.json
-
-###
-
-DELETE http://localhost:8080/api/part/delete/29
-
-<> 2019-01-15T080506.500.json
-
-###
-
-GET http://localhost:8080/api/list/optional
-
-<> 2019-01-15T080445.200.json
-
-###
-
-GET http://localhost:8080/api/info/assembliesavailable
-
-<> 2019-01-15T080438.200.json
-
-###
-
-POST http://localhost:8080/api/part
-Content-Type: application/json
-
-{
-  "name": "Водяное охлаждение",
-  "required": "false",
-  "count": "1"
-}
-
-###
-
-POST http://localhost:8080/api/part/2
-
-<> 2019-01-15T080329.500.json
-
-###
-
-GET http://localhost:8080/api/part/2
-
-<> 2019-01-15T080316.405.json
-
-###
-
-GET http://localhost:8080/api/part/2
-
-<> 2019-01-15T080133.500.json
-
-###
-
-GET http://localhost:8080/api/part/2
-
-<> 2019-01-15T080033.405.json
-
-###
-
-DELETE http://localhost:8080/api/part/delete/29
-
-<> 2019-01-15T075747.500.json
-
-###
-
-GET http://localhost:8080/api/list/optional
-
-<> 2019-01-15T075733.200.json
-
-###
-
-GET http://localhost:8080/api/info/assembliesavailable
-
-<> 2019-01-15T075731.200.json
-
-###
-
-PUT http://localhost:8080/api/part/1
-Content-Type: application/json
-
-{
-  "name": "Материнская плата",
-  "required": "true",
-  "count": "7"
-}
-
-###
-
-PUT http://localhost:8080/api/part/1
-Content-Type: application/json
-
-{
-  "name": "Материнская плата",
-  "required": "true",
-  "count": "10"
-}
-
-###
-
-POST http://localhost:8080/api/part
-Content-Type: application/json
-
-{
-  "name": "Водяное охлаждение",
-  "required": "false",
-  "count": "1"
-}
-
-###
-
-DELETE http://localhost:8080/api/part/delete/28
-
-<> 2019-01-15T075337.500.json
-
-###
-
-PUT http://localhost:8080/api/part/1
-Content-Type: application/json
-
-{
-  "name": "Материнская плата",
-  "required": "true",
-  "count": "10"
-}
-
-<> 2019-01-15T075326.500.json
-
-###
-
-GET http://localhost:8080/api/list/optional
-
-<> 2019-01-15T075307.200.json
-
-###
-
-POST http://localhost:8080/api/part
-Content-Type: application/json
-
-{
-  "name": "Водяное охлаждение",
-  "required": "false",
-  "count": "1"
-}
-
-<> 2019-01-15T075255.500.json
-
-###
-
-GET http://localhost:8080/api/list/required
-
-<> 2019-01-15T075250.200.json
-
-###
-
-GET http://localhost:8080/api/part/2
-
-<> 2019-01-15T074746.405.json
 
 ###
 

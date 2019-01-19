@@ -11,21 +11,29 @@ public class ConvertHelper {
     private ConvertHelper() {
     }
 
+    /**
+     * Конвертер формата
+     *
+     * @param entity - формат backend и БД
+     * @return PartViewModel - формат HTTP
+     */
     public static PartViewModel convertToPartViewModel(Part entity) {
-        PartViewModel viewModel = new PartViewModel();
-
-        viewModel.setId(entity.getId());
-        viewModel.setName(entity.getName());
-        viewModel.setRequired(entity.isRequired());
-        viewModel.setCount(entity.getCount());
-
-        return viewModel;
+        return new PartViewModel(
+                String.valueOf(entity.getId()),
+                entity.getName(),
+                (entity.isNeed() ? "true" : "false"),
+                String.valueOf(entity.getCount()));
     }
 
+    /**
+     * Конвертер формата для backend
+     * @param viewModel - формат HTTP
+     * @return Part - формат backend и БД
+     */
     public static Part convertToPartEntity(PartViewModel viewModel) {
         return new Part(
                 viewModel.getName(),
-                viewModel.getRequired(),
-                viewModel.getCount());
+                viewModel.isRequired().equals("true"),
+                Integer.parseInt(viewModel.getCount()));
     }
 }

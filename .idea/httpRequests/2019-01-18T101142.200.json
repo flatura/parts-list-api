@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "Материнская плата",
+    "need": true,
+    "count": 5
+  },
+  {
+    "id": 2,
+    "name": "Звуковая карта",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 3,
+    "name": "Память",
+    "need": true,
+    "count": 10
+  },
+  {
+    "id": 4,
+    "name": "Процессор",
+    "need": true,
+    "count": 7
+  },
+  {
+    "id": 5,
+    "name": "Корпус",
+    "need": true,
+    "count": 8
+  },
+  {
+    "id": 6,
+    "name": "Видеокарта",
+    "need": false,
+    "count": 11
+  },
+  {
+    "id": 7,
+    "name": "Кулер процессора",
+    "need": true,
+    "count": 5
+  },
+  {
+    "id": 8,
+    "name": "Кулер корпуса, дополнительный",
+    "need": false,
+    "count": 10
+  },
+  {
+    "id": 9,
+    "name": "Подсветка корпуса",
+    "need": false,
+    "count": 4
+  },
+  {
+    "id": 10,
+    "name": "Накопитель HDD",
+    "need": false,
+    "count": 13
+  },
+  {
+    "id": 11,
+    "name": "Накопитель SSD",
+    "need": true,
+    "count": 15
+  },
+  {
+    "id": 12,
+    "name": "Накопитель M.2",
+    "need": false,
+    "count": 10
+  },
+  {
+    "id": 13,
+    "name": "Блок питания",
+    "need": true,
+    "count": 10
+  },
+  {
+    "id": 14,
+    "name": "ТВ-тюнер, карта захвата",
+    "need": false,
+    "count": 10
+  },
+  {
+    "id": 15,
+    "name": "Кабель SATA",
+    "need": true,
+    "count": 20
+  },
+  {
+    "id": 16,
+    "name": "Контейнер для HDD, SSD",
+    "need": false,
+    "count": 3
+  },
+  {
+    "id": 17,
+    "name": "Привод DVD",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 18,
+    "name": "Привод BD",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 19,
+    "name": "Контроллер RAID",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 20,
+    "name": "Контроллер PCI-USB3.0",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 21,
+    "name": "Контроллер PCI-COM",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 22,
+    "name": "Контроллер PCI-LPT",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 23,
+    "name": "Контроллер PCI-e-SATA",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 24,
+    "name": "Контроллер PCI-IEEE1394",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 25,
+    "name": "Контроллер PCI-Ethernet",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 26,
+    "name": "Контроллер PCI-WiFi",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 27,
+    "name": "Дисковод 3.5'' USB",
+    "need": false,
+    "count": 2
+  },
+  {
+    "id": 28,
+    "name": "Модем PCI",
+    "need": false,
+    "count": 2
+  }
+]

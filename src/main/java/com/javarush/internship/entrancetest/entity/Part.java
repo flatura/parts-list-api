@@ -15,7 +15,7 @@ public class Part{
     private String name;
 
     @Column(name = "required")
-    private boolean required;
+    private boolean need;
 
     @Column(name = "count")
     private Integer count;
@@ -25,37 +25,50 @@ public class Part{
         idCounter++;
     }
 
-    public Part(String name, boolean required, int count) {
+    public Part(String name, boolean need, int count) {
         this();
         this.name = name;
-        this.required = required;
+        this.need = need;
         this.count = count;
     }
 
-    public Part(int id, String name, boolean required, int count) {
+    /*
+        public Part(int id, String name, boolean need, int count) {
+            this.id = id;
+            this.name = name;
+            this.need = need;
+            this.count = count;
+        }
+    */
+    public void setId(Integer id) {
         this.id = id;
-        this.name = name;
-        this.required = required;
-        this.count = count;
     }
 
     public int getId() {
         return id;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setNeed(boolean need) {
+        this.need = need;
+    }
+
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
     public String getName() {
         return name;
     }
 
-    public boolean isRequired() {
-        return required;
+    public boolean isNeed() {
+        return need;
     }
 
     public int getCount() {
         return count;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }
