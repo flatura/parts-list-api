@@ -1,4 +1,4 @@
-# parts-list-api
+# Parts-list api
 
 Тестовое задание на поступление на стажировку JavaRush. 
 
